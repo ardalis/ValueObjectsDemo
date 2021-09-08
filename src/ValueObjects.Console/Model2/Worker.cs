@@ -21,7 +21,4 @@ public class Worker : BaseEntity
     {
         return $"{Name}\n{EmploymentDates}\n{Address}";
     }
-
-
 }
-

@@ -14,6 +14,11 @@ public class DateTimeRange : ValueObject
         EndDate = endDate;
     }
 
+    public DateTimeRange UpdateEndDate(DateTime endDate)
+    {
+        return new DateTimeRange(StartDate, endDate);
+    }
+
     /// <summary>
     /// Returns total number of days in the DateTimeRange.
     /// If no EndDate has been specified, will use provided endDateToUseIfMissing instead.

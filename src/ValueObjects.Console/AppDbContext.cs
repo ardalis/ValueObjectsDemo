@@ -17,10 +17,10 @@ public class AppDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<Worker>()
-            .OwnsOne<Name>(w => w.Name);
+            .OwnsOne(w => w.Name);
         modelBuilder.Entity<Worker>()
-            .OwnsOne<Address>(w => w.Address);
+            .OwnsOne(w => w.Address);
         modelBuilder.Entity<Worker>()
-            .OwnsOne<DateTimeRange>(w => w.EmploymentDates);
+            .OwnsOne(w => w.EmploymentDates);
     }
 }

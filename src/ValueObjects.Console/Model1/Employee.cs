@@ -2,21 +2,6 @@
 
 public class Employee
 {
-    public Employee(string firstName, string lastName, DateTime startDate, 
-        string address1, string city, string state, 
-        string postalCode, string country, string? address2 = null)
-    {
-        FirstName = firstName;
-        LastName = lastName;
-        StartDate = startDate;
-        Address1 = address1;
-        City = city;
-        State = state;
-        PostalCode = postalCode;
-        Country = country;
-        Address2 = address2;
-    }
-
     public int Id { get; set; }
 
     public string FirstName { get; set; }
@@ -31,6 +16,21 @@ public class Employee
     public string State { get; set; }
     public string PostalCode { get; set; }
     public string Country { get; set; }
+
+    public Employee(string firstName, string lastName, DateTime startDate,
+    string address1, string city, string state,
+    string postalCode, string country, string? address2 = null)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+        StartDate = startDate;
+        Address1 = address1;
+        City = city;
+        State = state;
+        PostalCode = postalCode;
+        Country = country;
+        Address2 = address2;
+    }
 
     public override string ToString()
     {

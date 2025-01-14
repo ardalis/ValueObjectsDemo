@@ -1,4 +1,4 @@
-﻿namespace ValueObjects.Console.Model1;
+﻿namespace ValueObjects.ConsoleDemo.Model1;
 
 public class Employee
 {
@@ -17,9 +17,15 @@ public class Employee
     public string PostalCode { get; set; }
     public string Country { get; set; }
 
-    public Employee(string firstName, string lastName, DateTime startDate,
-    string address1, string city, string state,
-    string postalCode, string country, string? address2 = null)
+    public Employee(string firstName,
+                    string lastName,
+                    DateTime startDate,
+                    string address1,
+                    string city,
+                    string state,
+                    string postalCode,
+                    string country,
+                    string? address2 = null)
     {
         FirstName = firstName;
         LastName = lastName;
@@ -40,4 +46,3 @@ public class Employee
         return $"{name}\n{dates}\n{address}";
     }
 }
-

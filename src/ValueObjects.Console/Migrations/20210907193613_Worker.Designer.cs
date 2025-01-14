@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace ValueObjects.Console.Migrations
+namespace ValueObjects.ConsoleDemo.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20210907193613_Worker")]

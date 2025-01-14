@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ValueObjects.Console.Migrations
+namespace ValueObjects.ConsoleDemo.Migrations
 {
     public partial class Worker : Migration
     {

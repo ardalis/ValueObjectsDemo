@@ -1,6 +1,6 @@
 ﻿using CSharpFunctionalExtensions;
 
-namespace ValueObjects.Console.Model2;
+namespace ValueObjects.ConsoleDemo.Model2;
 public class DateTimeRange : ValueObject
 {
     public DateTime StartDate { get; private set; }

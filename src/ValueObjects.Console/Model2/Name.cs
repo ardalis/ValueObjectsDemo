@@ -1,7 +1,7 @@
 ﻿using Ardalis.GuardClauses;
 using CSharpFunctionalExtensions;
 
-namespace ValueObjects.Console.Model2;
+namespace ValueObjects.ConsoleDemo.Model2;
 
 public class Name : ValueObject
 {

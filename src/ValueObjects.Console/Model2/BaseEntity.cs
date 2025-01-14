@@ -1,4 +1,4 @@
-﻿namespace ValueObjects.Console.Model2;
+﻿namespace ValueObjects.ConsoleDemo.Model2;
 
 public class BaseEntity
 {

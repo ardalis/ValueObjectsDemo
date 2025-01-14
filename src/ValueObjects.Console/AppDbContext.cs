@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ValueObjects.Console.Model1;
-using ValueObjects.Console.Model2;
+using ValueObjects.ConsoleDemo.Model1;
+using ValueObjects.ConsoleDemo.Model2;
+
+namespace ValueObjects.ConsoleDemo;
 
 public class AppDbContext : DbContext
 {

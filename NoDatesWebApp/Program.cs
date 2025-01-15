@@ -1,11 +1,13 @@
 using Microsoft.EntityFrameworkCore;
+using NoDatesWebApp.Controllers;
+using NoDatesWebApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("test"));
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
 
 builder.Services.AddScoped<AppointmentService>();
 

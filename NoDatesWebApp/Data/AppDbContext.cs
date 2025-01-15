@@ -1,4 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NoDatesWebApp.Controllers;
+
+namespace NoDatesWebApp.Data;
 
 public class AppDbContext : DbContext
 {

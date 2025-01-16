@@ -1,18 +1,11 @@
-﻿using Ardalis.GuardClauses;
-using CSharpFunctionalExtensions;
+﻿using CSharpFunctionalExtensions;
 
 namespace ValueObjects.ConsoleDemo.Model3;
 
-public class Name : ValueObject
+public class Name(LegalName firstName, LegalName lastName) : ValueObject
 {
-    public string FirstName { get; private set; }
-    public string LastName { get; private set; }
-
-    public Name(string firstName, string lastName)
-    {
-        FirstName = Guard.Against.NullOrEmpty(firstName, nameof(firstName));
-        LastName = Guard.Against.NullOrEmpty(lastName, nameof(lastName));
-    }
+    public LegalName FirstName { get; private set; } = firstName;
+    public LegalName LastName { get; private set; } = lastName;
 
     public override string ToString()
     {

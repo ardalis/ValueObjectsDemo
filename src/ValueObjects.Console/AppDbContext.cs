@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.ValueGeneration;
+using System.Reflection;
 using ValueObjects.ConsoleDemo.Model1;
 using ValueObjects.ConsoleDemo.Model2;
 using ValueObjects.ConsoleDemo.Model3;
@@ -24,34 +25,12 @@ public class AppDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        modelBuilder.Entity<Worker>()
-            .OwnsOne(w => w.Name);
-        modelBuilder.Entity<Worker>()
-            .OwnsOne(w => w.Address);
-        modelBuilder.Entity<Worker>()
-            .OwnsOne(w => w.EmploymentDates);
-
-        // model 3
-        modelBuilder.Entity<Laborer>(b =>
-        {
-            b.HasKey(x => x.Id);
-
-            b.Property(l => l.Id)
-            .HasValueGenerator<LaborerIdValueGenerator>()
-            .HasVogenConversion()
-            .IsRequired();
-        });
-        modelBuilder.Entity<Laborer>()
-            .OwnsOne(w => w.Name);
-        modelBuilder.Entity<Laborer>()
-            .OwnsOne(w => w.Address);
-        modelBuilder.Entity<Laborer>()
-            .OwnsOne(w => w.EmploymentDates);
-
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
 }
 
 [EfCoreConverter<LaborerId>]
+[EfCoreConverter<LegalName>]
 internal partial class VogenEfCoreConverters;
 
 internal class LaborerIdValueGenerator : ValueGenerator<LaborerId>

@@ -5,7 +5,7 @@ POST {{host}}/api/appointment
 Content-Type: application/json
 
 {
-    "StartYear": 2023,
+    "StartYear": 1999,
     "StartMonth": 12,
     "StartDay": 30,
     "StartHour": 14,

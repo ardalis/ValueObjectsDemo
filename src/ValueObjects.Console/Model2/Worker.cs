@@ -1,5 +1,4 @@
 ﻿namespace ValueObjects.ConsoleDemo.Model2;
-
 public class Worker : BaseEntity
 {
     public Name Name { get; set; }

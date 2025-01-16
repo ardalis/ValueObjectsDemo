@@ -16,10 +16,10 @@ public class AppointmentController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Create(AppointmentDTO appointmentDto)
     {
-        if (!ModelState.IsValid)
-        {
-            return BadRequest(ModelState);
-        }
+        //if (!ModelState.IsValid)
+        //{
+        //    return BadRequest(ModelState);
+        //}
 
         try
         {
@@ -35,10 +35,10 @@ public class AppointmentController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, AppointmentDTO appointmentDto)
     {
-        if (!ModelState.IsValid)
-        {
-            return BadRequest(ModelState);
-        }
+        //if (!ModelState.IsValid)
+        //{
+        //    return BadRequest(ModelState);
+        //}
 
         try
         {
